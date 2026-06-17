@@ -1,0 +1,50 @@
+---
+import Icon from "./Icon.astro";
+import { site } from "../data/site";
+
+const contacts = [
+  { label: "Email", value: site.email, href: `mailto:${site.email}`, icon: "mail" },
+  { label: "GitHub", value: "github.com/clydehan", href: site.github, icon: "code" },
+  { label: "LinkedIn", value: "linkedin.com/in/clydehan", href: site.linkedin, icon: "briefcase" },
+];
+---
+
+<section id="contact" class="container-pad py-24">
+  <p class="section-label mb-4"><Icon name="mail" class="h-4 w-4" /> Let’s connect</p>
+  <h2 class="font-display text-3xl font-semibold tracking-tight text-graphite dark:text-cloud sm:text-4xl">
+    Open to software engineering and AI-focused roles.
+  </h2>
+  <p class="mt-4 max-w-xl text-base leading-relaxed text-ash dark:text-slate">
+    Email is the fastest way to reach me. GitHub and LinkedIn are there for a deeper look first.
+  </p>
+
+  <div class="mt-10 grid gap-4 sm:grid-cols-3">
+    {contacts.map((c) => (
+      <a
+        href={c.href}
+        target={c.icon === "mail" ? undefined : "_blank"}
+        rel={c.icon === "mail" ? undefined : "noopener noreferrer"}
+        class="card group flex flex-col gap-3 p-5 soft-hover hover:border-copper/60"
+      >
+        <div class="flex items-center gap-2.5">
+          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-violet/10 text-copper">
+            <Icon name={c.icon} class="h-5 w-5" />
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-[0.12em] text-ash dark:text-slate">{c.label}</span>
+        </div>
+        <span class="font-display text-sm font-medium text-graphite group-hover:text-copper dark:text-cloud">
+          {c.value}
+        </span>
+      </a>
+    ))}
+  </div>
+
+  <a
+    href={site.resume}
+    download
+    class="mt-8 inline-flex items-center gap-2 rounded-full bg-copper px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-copper/90 hover:shadow-lg hover:shadow-copper/25"
+  >
+    <Icon name="rocket" class="h-4 w-4" />
+    Download Resume
+  </a>
+</section>

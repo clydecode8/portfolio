@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-black antialiased; }
+  ::selection { @apply bg-blue-500/20; }
+  :focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 6px; }
+}
+
+@layer components {
+  .container-pad { @apply mx-auto w-full max-w-7xl px-6 sm:px-10; }
+  .brand-mark {
+    @apply grid h-12 w-12 place-items-center text-sm font-black tracking-tight;
+    color: #050505;
+    clip-path: polygon(18% 0, 100% 0, 82% 100%, 0 100%);
+    background: rgba(255,255,255,.85);
+    box-shadow: 0 12px 35px rgba(0,0,0,.14);
+  }
+  .nav-link { @apply relative transition hover:text-blue-300; }
+  .nav-link::after { content:""; position:absolute; left:50%; bottom:-14px; height:4px; width:0; border-radius:999px; background:white; transform:translateX(-50%); transition: width .25s ease; }
+  .nav-link:hover::after { width:32px; }
+  .hero-cut { clip-path: polygon(0 0, 86% 0, 66% 100%, 0 100%); }
+  .social-tile { @apply grid h-12 w-12 place-items-center rounded-lg bg-neutral-200 text-xl font-black text-black shadow-[0_8px_18px_rgba(0,0,0,.18)] transition hover:-translate-y-1 hover:bg-white; }
+  .tech-card { @apply rounded-xl border border-blue-400/25 bg-white/[0.03] p-3 text-center transition duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:bg-white/[0.07] hover:shadow-[0_20px_45px_rgba(37,99,235,.12)]; }
+  .tech-logo { @apply mx-auto grid h-16 w-16 place-items-center rounded-lg border border-yellow-300/35 bg-black text-xl font-black text-white shadow-inner transition duration-300; }
+  .project-card { border: 1px solid rgba(0,0,0,.06); }
+}
+
+@layer utilities {
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .animate-wave { animation: wave 2.2s ease-in-out infinite; transform-origin: 70% 70%; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(8deg); }
+  50% { transform: rotate(0deg); }
+}
+
+@media (max-width: 1023px) {
+  .hero-cut { width: 100% !important; height: 58%; clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
+

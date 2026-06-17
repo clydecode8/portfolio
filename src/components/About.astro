@@ -1,0 +1,31 @@
+---
+import Icon from "./Icon.astro";
+const traits = [
+  { icon: "spark", label: "Product-minded" },
+  { icon: "shield", label: "Debugging-focused" },
+  { icon: "globe", label: "Clean UI" },
+  { icon: "zap", label: "Badminton player" },
+  { icon: "user", label: "Learning Japanese" },
+];
+---
+
+<section id="about" class="container-pad py-24">
+  <div class="reveal grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <p class="section-label mb-4"><Icon name="user" class="h-4 w-4" /> A little more about me</p>
+      <h2 class="font-display text-3xl font-semibold tracking-tight text-graphite dark:text-cloud sm:text-4xl">
+        I like building things that feel simple outside, but are structured inside.
+      </h2>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2">
+      {traits.map((trait) => (
+        <div class="flex items-center gap-3 rounded-2xl border border-line-light bg-white p-5 shadow-sm soft-hover dark:border-line-dark">
+          <div class="grid h-10 w-10 place-items-center rounded-xl bg-violet/10 text-copper">
+            <Icon name={trait.icon} class="h-5 w-5" />
+          </div>
+          <p class="font-display text-lg font-semibold text-graphite">{trait.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
