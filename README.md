@@ -1,3 +1,4 @@
+
 # Clyde Kok — Developer Portfolio
 
 A static portfolio built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com). No backend, no database — just static HTML/CSS/JS, ready to deploy.
@@ -9,7 +10,6 @@ A static portfolio built with [Astro](https://astro.build) and [Tailwind CSS](ht
 - Vanilla JS for the terminal-typing hero effect and the light/dark theme toggle (no UI framework needed)
 
 ## Project structure
-
 ```
 src/
   components/      Navbar, Hero, About, ProjectCard, Skills, Architecture, Experience, Contact, Footer
