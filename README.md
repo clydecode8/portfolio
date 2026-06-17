@@ -1,4 +1,4 @@
-# Clyde Han — Developer Portfolio
+# Clyde Kok — Developer Portfolio
 
 A static portfolio built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com). No backend, no database — just static HTML/CSS/JS, ready to deploy.
 
