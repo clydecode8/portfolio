@@ -9,30 +9,23 @@ const links = [
 ];
 ---
 
-<header class="fixed inset-x-0 top-6 z-50 px-4">
-  <nav class="mx-auto flex h-[70px] max-w-7xl items-center justify-between rounded-full border border-sky-100 bg-white/85 px-6 shadow-[0_20px_60px_rgba(14,165,233,.12)] backdrop-blur-xl sm:px-10">
-    
-    <a href="/" aria-label="Go home" class="flex items-center gap-3">
-      <img 
-        src="/favicon.svg" 
-        alt="Logo" 
-        class="h-10 w-10 rounded-full object-cover"
-      />
+<header class="fixed inset-x-0 top-4 z-50 px-3 sm:top-6 sm:px-4">
+  <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between rounded-full border border-sky-100 bg-white/90 px-4 shadow-[0_20px_60px_rgba(14,165,233,.12)] backdrop-blur-xl sm:h-[70px] sm:px-10">
+    <a href="/" aria-label="Go home" class="flex shrink-0 items-center gap-3">
+      <img src="/favicon.svg" alt="Logo" class="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10" />
     </a>
 
-    <ul class="hidden items-center gap-10 text-sm font-bold text-slate-800 md:flex">
+    <ul class="hidden items-center gap-8 font-mono text-sm font-bold text-slate-800 md:flex lg:gap-10">
       {links.map((link) => (
         <li>
-          <a class="transition hover:text-sky-500" href={link.href}>
-            {link.label}
-          </a>
+          <a class="transition hover:text-sky-500" href={link.href}>{link.label}</a>
         </li>
       ))}
     </ul>
 
     <a
       href={`mailto:${site.email}`}
-      class="rounded-full bg-sky-400 px-6 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-sky-500 hover:shadow-[0_16px_35px_rgba(14,165,233,.25)]"
+      class="rounded-full bg-sky-500 px-4 py-2 font-mono text-xs font-black uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-[0_16px_35px_rgba(14,165,233,.25)] sm:px-6 sm:py-3 sm:text-sm"
     >
       Contact
     </a>

@@ -1,97 +1,384 @@
 ---
 import { site } from "../data/site";
+
+const proofStack = [
+  { name: "React", icon: "/icons/react.webp" },
+  { name: "Python", icon: "/icons/python.webp" },
+  { name: "Spring Boot", icon: "/icons/springboot.webp" },
+  { name: "Gemini API", icon: "/icons/gemini.webp" },
+  { name: "Pinecone", icon: "/icons/pinecone.webp" },
+  { name: "Docker Compose", icon: "/icons/dockercompose.webp" },
+  { name: "GitHub", icon: "/icons/github.webp" },
+  { name: "Jenkins", icon: "/icons/jenkins.webp" },
+  { name: "Angular", icon: "/icons/angular.webp" },
+  { name: "Node.js", icon: "/icons/nodejs.webp" },
+];
+
+const scrollingStack = [...proofStack, ...proofStack, ...proofStack];
 ---
 
-<section class="relative min-h-screen overflow-hidden bg-[#dff4ff] px-6 pt-32 sm:px-10">
-  <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
-    
-    <div class="space-y-8">
-      <p class="inline-flex rounded-full bg-white/70 px-5 py-2 text-sm font-bold text-sky-600 shadow-sm">
-        Software Engineer Graduate
-      </p>
+<section class="relative isolate overflow-hidden bg-[#FDFBF7] px-5 pt-24 text-[#1f2933] sm:px-10 lg:pt-28">
+  <!-- subtle engineering grid -->
+  <div class="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] bg-[linear-gradient(to_right,rgba(15,23,42,.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,.08)_1px,transparent_1px)] bg-[size:42px_42px]"></div>
 
-      <div class="space-y-5">
-        <h1 class="max-w-3xl text-5xl font-black leading-tight tracking-tight text-slate-950 sm:text-7xl">
-          Building useful software with a clean engineering mindset.
-        </h1>
+  <!-- warm glow -->
+  <div class="pointer-events-none absolute left-1/2 top-20 -z-10 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,.20)_0%,rgba(253,251,247,.65)_60%,transparent_75%)] blur-2xl"></div>
 
-        <p class="max-w-2xl text-lg leading-8 text-slate-600">
-          I work across full-stack development, AI systems, backend services, and production-style engineering practices.
-        </p>
-      </div>
+  <div class="mx-auto max-w-7xl pb-12 sm:pb-16 lg:pb-20">
+    <div class="reveal flex justify-center pb-10 pt-4">
+      <span class="
+        inline-flex items-center gap-2
+        rounded-full
+        border border-emerald-200
+        bg-emerald-50/80
+        px-4 py-2
 
-      <div class="flex flex-wrap gap-4">
-        <a href="#projects" class="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white transition hover:-translate-y-1 hover:bg-sky-500">
-          View Work
-        </a>
+        font-mono
+        text-[10px]
+        font-black
+        uppercase
+        tracking-[0.18em]
+        text-emerald-600
 
-        <a href="#experience" class="rounded-full bg-white px-7 py-4 text-sm font-black text-slate-900 shadow-sm transition hover:-translate-y-1">
-          My Journey
-        </a>
-      </div>
+        shadow-[0_0_25px_rgba(16,185,129,.18)]
+        backdrop-blur
+        sm:text-[11px]
+      ">
+
+        <!-- glowing online dot -->
+        <span class="relative flex h-2.5 w-2.5">
+
+          <!-- pulse -->
+          <span class="
+            absolute
+            inline-flex
+            h-full w-full
+
+            animate-ping
+            rounded-full
+
+            bg-emerald-400
+            opacity-75
+          ">
+        </span>
+
+          <!-- solid dot -->
+          <span class="
+            relative
+            inline-flex
+
+            h-2.5 w-2.5
+
+            rounded-full
+
+            bg-emerald-500
+            shadow-[0_0_12px_rgba(16,185,129,.9)]
+          ">
+          </span>
+        </span>
+        Open to Software Engineering Roles 2026
+      </span>
     </div>
 
-    <div class="relative mx-auto w-full max-w-md">
-      <div class="absolute -inset-6 rounded-[3rem] bg-white/60 blur-2xl"></div>
+    <div class="grid items-center gap-10 md:grid-cols-[1fr_320px] lg:grid-cols-[220px_1fr_330px] xl:grid-cols-[250px_1fr_360px] lg:gap-8">
 
-      <div class="relative overflow-hidden rounded-[3rem] border border-white/70 bg-white p-4 shadow-[0_30px_80px_rgba(14,165,233,.18)]">
-        <img 
-          src="/han.jpeg" 
-          alt="Clyde Han" 
-          class="h-[520px] w-full rounded-[2.4rem] object-cover"
-        />
+      <!-- Left -->
+    <aside class="reveal order-3 flex flex-col items-center gap-4 md:col-span-2 lg:order-1 lg:col-span-1 lg:items-start">
+
+      <!-- Email button -->
+      <a 
+        href={`mailto:${site.email}`}
+        class="
+          group
+          inline-flex
+          items-center
+          gap-2
+
+          rounded-full
+          border
+          border-slate-900
+
+          bg-purple-600
+          px-5
+          py-3
+
+          font-mono
+          text-xs
+          font-black
+          text-white
+
+          shadow-[3px_3px_0_#111827]
+
+          transition
+          hover:-translate-y-1
+          hover:bg-slate-900
+          hover:shadow-[5px_5px_0_#a855f7]
+        "
+      >
+        <span class="text-base">✉</span>
+        Email Me
+      </a>
+
+
+      <!-- Social row -->
+      <div class="flex flex-wrap justify-center gap-3 lg:justify-start">
+
+        <!-- LinkedIn -->
+        <a 
+          href={site.linkedin}
+          target="_blank"
+          rel="noreferrer"
+          class="
+            group
+            inline-flex
+            items-center
+            gap-2
+
+            rounded-full
+            border
+            border-slate-900
+
+            bg-white
+            px-5
+            py-3
+
+            font-mono
+            text-xs
+            font-black
+            text-slate-900
+
+            shadow-[3px_3px_0_#111827]
+
+            transition
+            hover:-translate-y-1
+            hover:shadow-[5px_5px_0_#a855f7]
+          "
+        >
+
+          <span class="grid h-6 w-6 place-items-center rounded-full bg-[#0A66C2] text-[10px] text-white">
+            in
+          </span>
+
+          LinkedIn
+        </a>
+
+
+        <!-- GitHub -->
+        <a 
+          href={site.github}
+          target="_blank"
+          rel="noreferrer"
+          class="
+            group
+            inline-flex
+            items-center
+            gap-2
+
+            rounded-full
+            border
+            border-slate-900
+
+            bg-white
+            px-5
+            py-3
+
+            font-mono
+            text-xs
+            font-black
+            text-slate-900
+
+            shadow-[3px_3px_0_#111827]
+
+            transition
+            hover:-translate-y-1
+            hover:shadow-[5px_5px_0_#a855f7]
+          "
+        >
+
+          <img 
+            src="/icons/github.webp"
+            alt="GitHub"
+            class="h-5 w-5"
+          />
+
+          GitHub
+        </a>
+
       </div>
-    </div>
 
+
+      <!-- Resume button full width -->
+      <!-- <a 
+        href={site.resume}
+        download
+        class="
+          group
+          inline-flex
+          w-full
+          max-w-[230px]
+          items-center
+          justify-center
+          gap-2
+
+          rounded-full
+          border
+          border-slate-900
+
+          bg-white
+          px-5
+          py-3
+
+          font-mono
+          text-xs
+          font-black
+          text-slate-900
+
+          shadow-[3px_3px_0_#111827]
+
+          transition
+          hover:-translate-y-1
+          hover:shadow-[5px_5px_0_#a855f7]
+        "
+      >
+
+        <span class="text-base">
+          ↓
+        </span>
+
+        Download Resume
+
+      </a> -->
+
+    </aside>
+
+      <!-- Center -->
+      <main class="reveal order-1 text-center md:order-1 lg:order-2">
+        <div class="grid items-center gap-8 lg:grid-cols-[1fr_260px] xl:grid-cols-[1fr_300px]">
+
+          <!-- Text -->
+          <div>
+            <p class="mb-4 font-mono text-xs font-black uppercase tracking-[0.28em] text-purple-600 sm:text-sm">
+              Hey there, I&apos;m
+            </p>
+
+            <h1 class="font-display text-[4rem] font-black leading-[0.86] tracking-[-0.07em] text-slate-900 sm:text-[6rem] md:text-[7rem] lg:text-[6.6rem] xl:text-[7.5rem]">
+              Clyde
+              <br />
+              <span class="text-purple-600">Kok</span>
+            </h1>
+
+            <p class="mx-auto mt-5 max-w-2xl font-mono text-base font-semibold leading-7 text-slate-700 sm:text-lg lg:text-base xl:text-lg">
+              Software Engineer · AI & Backend Focus
+            </p>
+
+            <div class="mt-7 flex justify-center">
+              <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-slate-900 bg-purple-600 px-7 py-4 font-mono text-sm font-black text-white shadow-[5px_5px_0_#111827] transition hover:-translate-y-1 hover:bg-slate-900 hover:shadow-[7px_7px_0_#a855f7]">
+                Let&apos;s Talk
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Framed Image -->
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[1.6rem] bg-purple-500"></div>
+
+              <div class="relative overflow-hidden rounded-[1.6rem] border-2 border-slate-900 bg-white p-2 shadow-sm">
+                <img
+                  src="/han.jpeg"
+                  alt="Clyde Kok"
+                  class="h-[230px] w-[190px] rounded-[1.1rem] object-cover object-top sm:h-[270px] sm:w-[220px] lg:h-[290px] lg:w-[230px] xl:h-[320px] xl:w-[250px]"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- Right: 30 second pitch card -->
+      <aside class="reveal order-2 flex flex-col gap-5 md:order-2 lg:order-3">
+
+        <div class="max-w-sm overflow-hidden rounded-[1.4rem] border-2 border-slate-900 bg-[#fffefa] shadow-[6px_6px_0_#a855f7]">
+
+          <!-- window header -->
+          <div class="flex items-center justify-between border-b-2 border-slate-900 bg-white px-4 py-3">
+
+            <div class="flex gap-2">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+            </div>
+
+            <p class="font-mono text-[10px] font-black uppercase tracking-widest text-slate-400">
+              about-me.txt
+            </p>
+
+          </div>
+
+          <!-- content -->
+          <div class="p-6">
+
+            <p class="font-mono text-xs font-black uppercase tracking-widest text-purple-600">
+              Here's my 30 second pitch:
+            </p>
+
+            <h3 class="mt-4 font-display text-xl font-black leading-tight text-slate-950">
+              I build software that turns complex problems into practical products.
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-slate-700">
+              I'm a software engineer focused on  
+              <span class="font-bold text-slate-950">
+                AI-powered and full-stack applications
+              </span>
+              that solve practical problems.
+            </p>
+            <div class="mt-5 space-y-3">
+              <div class="flex gap-3">
+                <span class="text-purple-600">✦</span>
+
+                <p class="text-sm text-slate-700">
+                  Worked with fintech systems involving APIs, testing, and debugging.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-purple-600">✦</span>
+
+                <p class="text-sm text-slate-700">
+                  Built AI projects using resume understanding, retrieval, and evaluation.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-purple-600">✦</span>
+                <p class="text-sm text-slate-700">
+                  I enjoy understanding the "why" behind problems and building solutions that are reliable, scalable, and useful.
+                </p>
+              </div>
+            </div>
+            <div class="mt-6 rounded-full border border-purple-200 bg-purple-50 px-4 py-2 text-center">
+              <p class="font-mono text-[11px] font-bold text-purple-700">
+                Full-stack • AI • Backend Engineering
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
   </div>
 </section>
 
-<section id="experience" class="bg-white px-6 py-24 sm:px-10">
-  <div class="mx-auto max-w-6xl">
-    <div class="mb-14 max-w-2xl">
-      <p class="mb-3 text-sm font-black uppercase tracking-[0.25em] text-sky-500">
-        My journey
-      </p>
-      <h2 class="text-4xl font-black text-slate-950 sm:text-5xl">
-        From learning software to working around real systems.
-      </h2>
-    </div>
-
-    <div class="relative border-l-2 border-sky-100 pl-8">
-      
-      <div class="mb-12">
-        <div class="absolute -left-[11px] h-5 w-5 rounded-full bg-sky-400 ring-8 ring-sky-50"></div>
-        <p class="text-sm font-bold text-sky-500">2025</p>
-        <h3 class="mt-2 text-2xl font-black text-slate-950">
-          Software Engineer Intern · iFAST
-        </h3>
-        <p class="mt-3 max-w-2xl text-slate-600">
-          Worked around banking-related systems, API testing, backend services, CI/CD workflows, logs, and production-style debugging.
-        </p>
+<section aria-label="Technology stack proof" class="overflow-hidden border-y border-slate-900/10 bg-[#fffefa] py-5">
+  <div class="tech-marquee flex w-max gap-4">
+    {scrollingStack.map((item) => (
+      <div class="flex min-w-max items-center gap-3 rounded-full border border-slate-900/10 bg-white px-5 py-3 shadow-sm">
+        <img src={item.icon} alt={item.name} class="h-6 w-6  contrast-125" loading="lazy" />
+        <span class="font-mono text-xs font-black uppercase tracking-[0.12em] text-slate-500">
+          {item.name}
+        </span>
       </div>
-
-      <div class="mb-12">
-        <div class="absolute -left-[11px] h-5 w-5 rounded-full bg-sky-400 ring-8 ring-sky-50"></div>
-        <p class="text-sm font-bold text-sky-500">2026</p>
-        <h3 class="mt-2 text-2xl font-black text-slate-950">
-          AI Interview Assistant
-        </h3>
-        <p class="mt-3 max-w-2xl text-slate-600">
-          Built a resume-aware AI interview system using RAG, embeddings, vector search, and LLM evaluation.
-        </p>
-      </div>
-
-      <div>
-        <div class="absolute -left-[11px] h-5 w-5 rounded-full bg-sky-400 ring-8 ring-sky-50"></div>
-        <p class="text-sm font-bold text-sky-500">Now</p>
-        <h3 class="mt-2 text-2xl font-black text-slate-950">
-          Full-stack + AI engineering focus
-        </h3>
-        <p class="mt-3 max-w-2xl text-slate-600">
-          Improving my portfolio, building stronger projects, and preparing for software engineering roles.
-        </p>
-      </div>
-
-    </div>
+    ))}
   </div>
 </section>

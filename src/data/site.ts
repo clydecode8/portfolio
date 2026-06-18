@@ -1,12 +1,12 @@
 export const site = {
-  name: "Clyde Han",
+  name: "Clyde Kok",
   role: "Software Engineer building AI-powered applications with production-focused engineering practices.",
   tagline:
-    "Former iFAST Software Engineer Intern with exposure to banking systems, API testing, CI/CD workflows, and cross-team debugging. Currently building RAG-based AI products that solve real user problems.",
+    "Former iFAST Software Engineer Intern, API testing, CI/CD workflows, and cross-team debugging. Currently building RAG-based AI products that solve real user problems.",
   location: "Kuala Lumpur, Malaysia",
-  email: "clyde.han@example.com",
-  github: "https://github.com/clydehan",
-  linkedin: "https://linkedin.com/in/clydehan",
+  email: "clyvant@gmail.com",
+  github: "https://github.com/clydecode8",
+  linkedin: "https://www.linkedin.com/in/clyvant/",
   resume: "/resume.pdf",
 };
 

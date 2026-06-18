@@ -4,13 +4,15 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-white font-sans text-black antialiased; }
+  body { @apply bg-white font-sans text-black antialiased; overflow-x: hidden; }
+  img { max-width: 100%; }
+  * { box-sizing: border-box; }
   ::selection { @apply bg-blue-500/20; }
   :focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 6px; }
 }
 
 @layer components {
-  .container-pad { @apply mx-auto w-full max-w-7xl px-6 sm:px-10; }
+  .container-pad { @apply mx-auto w-full max-w-7xl px-5 sm:px-10; }
   .brand-mark {
     @apply grid h-12 w-12 place-items-center text-sm font-black tracking-tight;
     color: #050505;
@@ -24,7 +26,7 @@
   .hero-cut { clip-path: polygon(0 0, 86% 0, 66% 100%, 0 100%); }
   .social-tile { @apply grid h-12 w-12 place-items-center rounded-lg bg-neutral-200 text-xl font-black text-black shadow-[0_8px_18px_rgba(0,0,0,.18)] transition hover:-translate-y-1 hover:bg-white; }
   .tech-card { @apply rounded-xl border border-blue-400/25 bg-white/[0.03] p-3 text-center transition duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:bg-white/[0.07] hover:shadow-[0_20px_45px_rgba(37,99,235,.12)]; }
-  .tech-logo { @apply mx-auto grid h-16 w-16 place-items-center rounded-lg border border-yellow-300/35 bg-black text-xl font-black text-white shadow-inner transition duration-300; }
+  .tech-logo { @apply mx-auto grid h-16 w-16 place-items-center rounded-lg border border-sky-100 bg-sky-50 text-xl font-black text-slate-800 shadow-inner transition duration-300; }
   .project-card { border: 1px solid rgba(0,0,0,.06); }
 }
 
@@ -50,3 +52,39 @@
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
 
+
+@layer components {
+  .section-label { @apply inline-flex items-center gap-2 font-mono text-xs font-black uppercase tracking-[0.25em] text-sky-500; }
+  .card { @apply rounded-3xl border border-sky-100 bg-white shadow-sm; }
+  .soft-hover { @apply transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(14,165,233,.12)]; }
+}
+
+@layer components {
+  .abstract-stroke { display: none; }
+}
+
+@keyframes tech-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+
+.tech-marquee {
+  animation: tech-marquee 26s linear infinite;
+  padding-left: 1rem;
+}
+
+.tech-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
+}
+
+
+@layer components {
+  .primary-cta { @apply inline-flex items-center justify-center gap-3 rounded-full bg-sky-500 px-7 py-4 font-mono text-sm font-black text-white shadow-[0_18px_40px_rgba(14,165,233,.24)] transition hover:-translate-y-1 hover:bg-sky-600; }
+  .secondary-cta { @apply inline-flex items-center justify-center gap-3 rounded-full border border-sky-200 bg-white/70 px-6 py-4 font-mono text-sm font-black shadow-sm transition hover:-translate-y-1 hover:border-sky-300 hover:bg-white; }
+  .mono-brand-icon { filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(1131%) hue-rotate(169deg) brightness(92%) contrast(88%); opacity: .82; }
+  .mono-brand-icon-soft { filter: grayscale(1) contrast(1.15); opacity: .68; }
+}
