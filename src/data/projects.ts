@@ -17,33 +17,180 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "ai-interview-assistant",
-    title: "AI Interview Assistant",
-    category: "AI / Web App",
-    short: "Resume-aware mock interviews with AI feedback.",
-    overview: "An AI-powered interview platform that reads candidate resumes, retrieves relevant context, generates personalized questions, and evaluates answers with structured feedback.",
-    problem: "Normal AI interview tools often generate generic questions because they do not understand the candidate's actual resume or project background.",
-    solution: "I designed a RAG-style flow using resume parsing, semantic chunking, embeddings, vector retrieval, and LLM prompting so the generated questions stay closer to the candidate's experience.",
-    highlights: ["Resume parsing and semantic search", "Personalized question generation", "Answer evaluation with AI scoring", "Rate limiting to protect AI endpoints"],
-    architecture: ["Resume", "Chunks", "Embeddings", "Vector DB", "LLM", "Feedback"],
-    stack: ["React", "Node.js", "Express", "Gemini", "Pinecone", "Tailwind"],
-    image: "/images/ai-interview.svg",
-    accent: "blue",
-  },
+  slug: "ai-interview-assistant",
+
+  title: "AI Interview Assistant",
+
+  category: "AI / Web App  (May 2026 - Ongoing)",
+
+  short:
+    "Resume-aware mock interviews using retrieval augmented AI feedback.",
+
+  overview:
+    "A full-stack AI interview preparation platform exploring Retrieval-Augmented Generation (RAG) to improve personalization. Instead of relying only on a language model's internal knowledge, the system retrieves resume-specific context before generating questions and feedback.",
+
+  problem:
+    "Research by Ji et al. (2023) highlights that Large Language Models can generate fluent but unsupported responses when relying only on their internal parameters, commonly known as the hallucination problem. In interview preparation, a general-purpose AI assistant lacks candidate-specific context, which can lead to questions and feedback that are not personalized to the candidate's resume, projects, and experience.",
+  
+  solution:
+    "I implemented a RAG pipeline that processes resumes through parsing, semantic chunking, embedding generation, vector similarity search, and context-based prompting. Retrieved resume information is provided to the LLM to generate more relevant interview questions and evaluations.",
+
+  highlights: [
+    "Resume parsing and semantic retrieval",
+    "Vector similarity search with embeddings",
+    "Context-aware LLM prompting",
+    "AI response evaluation and endpoint protection"
+  ],
+
+  architecture: [
+    "Resume Upload",
+    "Semantic Chunks",
+    "Embeddings",
+    "Vector Database",
+    "Context Retrieval",
+    "LLM Evaluation"
+  ],
+
+  stack: [
+    "React",
+    "Node.js",
+    "Express",
+    "Gemini API",
+    "Pinecone",
+    "Tailwind"
+  ],
+
+  references: [
+    {
+      title:
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      authors:
+        "Lewis et al., 2020",
+      url:
+        "https://arxiv.org/abs/2005.11401"
+    },
+    {
+      title:
+        "A Survey on Hallucination in Large Language Models",
+      authors:
+        "Ji et al., 2023",
+      url:
+        "https://arxiv.org/abs/2311.05232"
+    },
+    {
+      title:
+        "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      authors:
+        "Gao et al., 2023",
+      url:
+        "https://arxiv.org/abs/2312.10997"
+    }
+  ],
+  image: "/images/ai-interview.svg",
+
+  accent: "blue",
+},
   {
-    slug: "transcript-verification-system",
-    title: "Transcript Verification System",
-    category: "Blockchain / Credential Trust",
-    short: "Academic credential verification with DID, IPFS, and revocation.",
-    overview: "A decentralized academic transcript system designed to help employers verify academic records without relying only on manual document checking.",
-    problem: "Academic transcripts can be forged or manually altered, making verification slow and dependent on institution-side checking.",
-    solution: "The system stores transcript files through IPFS, maps credential metadata through DID-based identity flows, and supports revocation so employers can check whether a record is still valid.",
-    highlights: ["DID-based credential flow", "IPFS document storage", "Employer verification portal", "Revocation-ready design"],
-    architecture: ["Admin", "DID", "IPFS", "Smart Contract", "Employer"],
-    stack: ["React", "Node.js", "MongoDB", "IPFS", "SSI", "Smart Contracts"],
-    image: "/images/transcript-system.svg",
-    accent: "purple",
-  },
+  slug: "transcript-verification-system",
+
+  title: "Decentralized Academic Transcript System",
+
+  category: "Blockchain / Self-Sovereign Identity (May 2025 - April 2026)",
+
+  short:
+    "Tamper-resistant academic credential verification using SSI, DID, IPFS, and blockchain.",
+
+
+  overview:
+    "A blockchain-based academic credential platform exploring Self-Sovereign Identity (SSI) to modernize transcript issuance and verification. The system allows institutions to issue verifiable credentials, students to manage their digital identity, and employers to verify academic records without relying on manual verification workflows.",
+
+
+  problem:
+    "Research by Casino et al. (2018) highlights that traditional certificate verification processes can be time-consuming and inefficient, while Obilikwu et al. (2019) discusses how advances in digital editing technologies increase risks of credential forgery. Traditional institution-controlled credential systems also limit user ownership and transparency over academic records.",
+
+
+  solution:
+    "I developed a decentralized verification system using Hyperledger Aries for DID-based identity management, IPFS for distributed transcript storage, and smart contracts for credential verification and revocation. The architecture separates identity, storage, and verification layers to improve trust, traceability, and credential ownership.",
+
+
+  highlights: [
+    "Self-Sovereign Identity credential flow",
+    "DID-based issuer and holder architecture",
+    "IPFS decentralized transcript storage",
+    "Role-based access control",
+    "Employer verification portal"
+  ],
+
+
+  architecture: [
+    "Institution",
+    "Issue Credential",
+    "DID",
+    "Aries Wallet",
+    "IPFS",
+    "Employer Verification"
+  ],
+
+
+  stack: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Hyperledger Aries",
+    "Hyperledger Indy (von-network)",
+    "IPFS",
+    "Docker",
+  ],
+
+  demos: [
+    {
+      title: "Admin Credential Issuing Flow",
+      description:
+        "Uploading transcripts, issuing credentials, managing DID records, and handling credential revocation.",
+      video: "/videos/BLOCKTAR-ADMIN.mp4",
+    },
+    {
+      title: "Employer Verification Flow",
+      description:
+        "Verifying student credentials, retrieving transcript records, and checking credential validity.",
+      video: "/videos/BLOCKTAR-STD+VERIFIER.mkv",
+    },
+  ],
+
+  references: [
+    {
+      title:
+        "A systematic literature review of blockchain-based applications",
+      authors:
+        "Casino et al., 2018",
+      url:
+        "https://doi.org/10.1016/j.tele.2018.11.006"
+    },
+    {
+      title:
+        "Blockchain Technology in Education",
+      authors:
+        "Alammary et al., 2019",
+      url:
+        "https://doi.org/10.3390/app9122400"
+    },
+    {
+      title:
+        "Self-Sovereign Identity Principles and Blockchain Identity Management",
+      authors:
+        "Shuaib et al., 2022",
+      url:
+        "#"
+    }
+  ],
+
+  image: "/images/transcript-system.svg",
+
+  accent: "purple",
+},
   {
     slug: "wildfire-prediction-study",
     title: "Wildfire Prediction Study",
