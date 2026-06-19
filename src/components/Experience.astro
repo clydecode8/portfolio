@@ -23,65 +23,9 @@ const timeline = [
     highlights: [
       "First Class Honours with CGPA 3.89",
       "Studied OOP, DSA, Software Architecture, AI, Data Science, and SQA",
-      "Gained practical exposure to Factory and Strategy design patterns",
       "Designed relational database schemas and optimized SQL queries",
     ],
     tech: ["Java", "Python", "SQL", "OOP", "DSA", "Architecture"],
-  },
-  {
-    badge: "CTF",
-    command: "explore cybersecurity --ctf --problem-solving",
-    title: "Cybersecurity & Problem Solving",
-    summary:
-      "Joined cybersecurity competitions to sharpen debugging, security thinking, and analytical problem-solving skills.",
-    highlights: [
-      "Participated in 6 Capture The Flag competitions",
-      "Competed in DownUnder CTF, RawSec Rentas CTF, vsCTF, and APU Battle of Hackers",
-      "Improved ability to investigate systems, read errors, and solve technical challenges",
-    ],
-    tech: ["Linux", "Networking", "Security", "Debugging"],
-  },
-  {
-    badge: "AI",
-    command: "research ai --ml --data-science",
-    title: "AI & Data Science Exploration",
-    summary:
-      "Explored machine learning workflows through data preprocessing, feature engineering, model training, evaluation, and visualisation.",
-    highlights: [
-      "Built wildfire prediction pipelines using 38k environmental and geographic records",
-      "Benchmarked MLP, DNN, CNN-LSTM, GP-LSTM, GCN-LSTM, and hybrid models",
-      "Used Optuna, Random Search, Bayesian tuning, and Hyperband",
-      "Created a Streamlit dashboard for prediction and trend visualisation",
-    ],
-    tech: ["PyTorch", "TensorFlow", "Scikit-learn", "Streamlit", "Optuna"],
-  },
-  {
-    badge: "FYP",
-    command: "build decentralized-system --blockchain --ssi",
-    title: "Decentralized Academic Transcript System",
-    summary:
-      "Developed a blockchain-based credential verification system to help employers verify academic transcripts more securely.",
-    highlights: [
-      "Built web and mobile platforms using JavaScript, Flutter, and Dart",
-      "Integrated Self-Sovereign Identity concepts and IPFS-based storage",
-      "Designed employer verification flow and credential validation process",
-      "Conducted usability testing with 15 stakeholders",
-    ],
-    tech: ["Blockchain", "SSI", "IPFS", "Flutter", "JavaScript"],
-  },
-  {
-    badge: "Projects",
-    command: "build fullstack-projects --spring --ai",
-    title: "AI Customer Service Chatbot Platform",
-    summary:
-      "Built a production-style customer support system combining backend services, AI chatbot logic, real-time messaging, and Docker-based setup.",
-    highlights: [
-      "Developed backend services using Spring Boot, Python, Redis, and Docker Compose",
-      "Implemented Redis Pub/Sub for real-time notifications and live chat",
-      "Trained NLP models using 57,000 customer support queries",
-      "Evaluated models using accuracy, precision, recall, F1-score, and K-Fold validation",
-    ],
-    tech: ["Spring Boot", "Python", "Redis", "Docker", "NLP"],
   },
   {
     badge: "2025",
@@ -92,8 +36,8 @@ const timeline = [
     highlights: [
       "Developed full-stack features using Angular and Spring",
       "Designed, tested, and integrated REST APIs with frontend components",
-      "Performed unit and regression testing across Angular and Spring components",
-      "Debugged frontend/backend integration issues and reviewed code using Git, Jenkins, and Argo CD",
+      "Performed unit and regression testing",
+      "Debugged frontend/backend integration issues using Git, Jenkins, and Argo CD",
     ],
     tech: ["Angular", "Spring", "REST API", "Git", "Jenkins", "Argo CD"],
   },
@@ -107,34 +51,20 @@ const timeline = [
       "Implemented resume parsing and semantic chunking",
       "Used embeddings and vector search for personalized question generation",
       "Applied RAG prompting to reduce irrelevant AI responses",
-      "Evaluated answers using AI-based feedback and retrieval metrics",
     ],
     tech: ["LLM", "RAG", "Embeddings", "Vector DB", "Node.js"],
-  },
-  {
-    badge: "Now",
-    command: "focus career --software-engineer",
-    title: "Full-Stack / Backend / AI Focus",
-    summary:
-      "Currently improving my portfolio, project quality, and engineering communication to prepare for software engineering roles.",
-    highlights: [
-      "Building stronger full-stack and backend projects",
-      "Improving system design and architecture thinking",
-      "Exploring practical AI features that solve real user problems",
-      "Refining my portfolio for hiring managers to skim quickly",
-    ],
-    tech: ["Full-Stack", "Backend", "AI", "System Design"],
   },
 ];
 ---
 
-<section id="experience" class="bg-[#f8fafc] px-5 py-20 sm:px-10 sm:py-24">
+<section id="experience" class="bg-[#f8fafc] px-4 py-16 sm:px-10 sm:py-24">
   <div class="mx-auto max-w-7xl">
-    <div class="reveal mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+    <div class="mb-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
       <div>
         <p class="font-mono text-xs font-black uppercase tracking-[0.25em] text-purple-600">
           My journey
         </p>
+
         <h2 class="mt-3 max-w-2xl font-mono text-3xl font-black tracking-[-0.05em] text-slate-950 sm:text-5xl">
           From fundamentals to production-aware engineering.
         </h2>
@@ -146,191 +76,79 @@ const timeline = [
       </p>
     </div>
 
-    <div class="reveal rounded-[2rem] border border-sky-100 bg-white p-4 shadow-[0_30px_90px_rgba(15,23,42,.10)] sm:p-8">
+    <div class="rounded-[1.5rem] border border-sky-100 bg-white p-3 shadow-[0_30px_90px_rgba(15,23,42,.10)] sm:rounded-[2rem] sm:p-8">
       <div class="relative">
         <div class="absolute left-4 top-0 hidden h-full w-px bg-sky-100 sm:block"></div>
 
         <div class="space-y-6">
           {timeline.map((item, index) => (
-            <article class="
-              group relative overflow-hidden rounded-[1.5rem]
-              border border-slate-200 bg-white
-              shadow-sm transition duration-300
-              hover:-translate-y-1
-              hover:shadow-[0_25px_70px_rgba(14,165,233,.15)]
-              sm:ml-10
-            ">
+            <article class="group relative overflow-hidden rounded-[1.25rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(14,165,233,.15)] sm:ml-10 sm:rounded-[1.5rem]">
+              <div class="absolute -left-[2.95rem] top-7 hidden h-8 w-8 rounded-full border-4 border-white bg-sky-400 shadow-[0_0_0_6px_rgba(14,165,233,.12)] sm:block"></div>
 
-              <!-- timeline dot -->
-              <div class="
-                absolute -left-[2.95rem] top-7 hidden h-8 w-8
-                rounded-full border-4 border-white
-                bg-sky-400
-                shadow-[0_0_0_6px_rgba(14,165,233,.12)]
-                sm:block
-              "></div>
-
-
-              <!-- terminal top bar -->
-              <div class="
-                flex items-center justify-between
-                border-b border-white/10
-                bg-slate-950 px-5 py-3
-              ">
+              <div class="flex items-center justify-between border-b border-white/10 bg-slate-950 px-4 py-3 sm:px-5">
                 <div class="flex gap-2">
                   <span class="h-3 w-3 rounded-full bg-red-400"></span>
                   <span class="h-3 w-3 rounded-full bg-yellow-300"></span>
                   <span class="h-3 w-3 rounded-full bg-green-400"></span>
                 </div>
 
-                <span class="
-                  hidden font-mono text-xs
-                  text-slate-400 sm:block
-                ">
+                <span class="hidden font-mono text-xs text-slate-400 sm:block">
                   clyde@portfolio:~/journey
                 </span>
               </div>
 
-
-              <div class="
-                grid gap-6 bg-[#f8fafc]
-                p-5 sm:grid-cols-[1fr_220px] sm:p-6
-              ">
-
-                <!-- left -->
+              <div class="grid gap-5 bg-[#f8fafc] p-4 sm:grid-cols-[1fr_220px] sm:p-6">
                 <div>
-
-
-                  <!-- command -->
-                  <div class="
-                    rounded-xl bg-slate-950
-                    px-4 py-3 font-mono
-                    shadow-inner
-                  ">
-
+                  <div class="rounded-xl bg-slate-950 px-4 py-3 font-mono shadow-inner">
                     <div class="mb-2 text-xs text-slate-500">
                       Last login: {item.badge}
                     </div>
 
-
-                    <p class="
-                      break-words text-sm
-                      font-black text-purple-600
-                    ">
-                      <span class="text-green-300">
-                        $
-                      </span>{" "}
-                      {item.command}
+                    <p class="break-words text-sm font-black text-purple-400">
+                      <span class="text-green-300">$</span> {item.command}
 
                       {index === timeline.length - 1 && (
-                        <span class="
-                          ml-1 inline-block h-4 w-2
-                          animate-blink bg-sky-300
-                          align-middle
-                        "></span>
+                        <span class="ml-1 inline-block h-4 w-2 animate-blink bg-sky-300 align-middle"></span>
                       )}
-
                     </p>
                   </div>
 
-
-
-                  <!-- content -->
-                  <div class="mt-6">
-
-                    <h3 class="
-                      font-mono text-xl font-black
-                      tracking-[-0.04em]
-                      text-slate-950
-                    ">
+                  <div class="mt-5">
+                    <h3 class="font-mono text-xl font-black tracking-[-0.04em] text-slate-950 sm:text-2xl">
                       {item.title}
                     </h3>
 
-
-                    <p class="
-                      mt-3 text-sm leading-7
-                      text-slate-600
-                    ">
+                    <p class="mt-3 text-sm leading-7 text-slate-600">
                       {item.summary}
                     </p>
 
-
-
-                    <!-- log style -->
-                    <div class="
-                      mt-5 space-y-2
-                      font-mono text-sm
-                    ">
-
+                    <div class="mt-5 space-y-2 font-mono text-sm">
                       {item.highlights.map((point) => (
-                        <div class="
-                          flex gap-3 text-slate-700
-                        ">
-                          <span class="text-green-500">
-                            ✓
-                          </span>
-
-                          <span>
-                            {point}
-                          </span>
-
+                        <div class="flex gap-3 text-slate-700">
+                          <span class="text-green-500">✓</span>
+                          <span>{point}</span>
                         </div>
                       ))}
-
                     </div>
-
                   </div>
-
                 </div>
 
+                <aside class="rounded-xl border border-slate-800 bg-slate-950 p-4 font-mono">
+                  <p class="text-xs text-slate-500">npm install</p>
 
-
-
-                <!-- right terminal dependency panel -->
-                <aside class="
-                  rounded-xl
-                  border border-slate-800
-                  bg-slate-950
-                  p-4 font-mono
-                ">
-
-                  <p class="
-                    text-xs text-slate-500
-                  ">
-                    npm install
-                  </p>
-
-
-                  <p class="
-                    mt-1 text-sm
-                    font-bold text-purple-600
-                  ">
+                  <p class="mt-1 text-sm font-bold text-purple-400">
                     dependencies
                   </p>
 
-
-                  <div class="
-                    mt-4 flex flex-wrap gap-2
-                  ">
-
+                  <div class="mt-4 flex flex-wrap gap-2">
                     {item.tech.map((tech) => (
-                      <span class="
-                        rounded bg-white/10
-                        px-2 py-1
-                        text-xs
-                        text-slate-300
-                      ">
+                      <span class="rounded bg-white/10 px-2 py-1 text-xs text-slate-300">
                         {tech}
                       </span>
                     ))}
-
                   </div>
-
-
                 </aside>
-
               </div>
-
             </article>
           ))}
         </div>
@@ -338,3 +156,25 @@ const timeline = [
     </div>
   </div>
 </section>
+
+<style>
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #experience {
+      overflow-x: hidden;
+    }
+
+    #experience * {
+      max-width: 100%;
+    }
+  }
+</style>
