@@ -131,6 +131,15 @@ export const projects: Project[] = [
     "Employer verification portal"
   ],
 
+  
+  links: [
+    {
+      title: "Source Code",
+      url: "https://github.com/clydecode8/BlockTAR_v2",
+      type: "GitHub",
+      icon: "/icons/github.webp"
+    }
+  ],
 
   architecture: [
     "Institution",
