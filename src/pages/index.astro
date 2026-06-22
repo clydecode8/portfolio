@@ -26,7 +26,9 @@ import { projects } from "../data/projects";
           <a href="#projects" class="hidden rounded-full bg-sky-500 px-6 py-3 font-mono text-xs font-black uppercase text-white transition hover:-translate-y-1 hover:bg-sky-600 sm:inline-block">View all projects</a>
         </div>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0,3).map((project) => <ProjectCard project={project} />)}
+          {projects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
         </div>
       </div>
     </section>
